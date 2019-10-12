@@ -1,0 +1,69 @@
+<%= form_with(model: blogger, local: true) do |form| %>
+  <% if blogger.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(blogger.errors.count, "error") %> prohibited this blogger from being saved:</h2>
+
+      <ul>
+      <% blogger.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titulo %>
+    <%= form.text_field :titulo, id: :blogger_titulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :resumen %>
+    <%= form.text_field :resumen, id: :blogger_resumen %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sec1 %>
+    <%= form.text_area :sec1, id: :blogger_sec1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sec2 %>
+    <%= form.text_area :sec2, id: :blogger_sec2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fotoppal %>
+    <%= form.file_field :fotoppal, id: :blogger_fotos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fotosec %>
+    <%= form.file_field :fotosec, id: :blogger_fotos %>
+  </div>
+
+  </div>  
+
+  <div class="field">
+    <%= form.label :org %>
+    <%= form.text_field :org, id: :blogger_org %>
+  </div>
+
+  <div class="field">
+    <%= form.label :categoria %>
+    <%= form.text_field :categoria, id: :blogger_categoria %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tag %>
+    <%= form.text_field :tag, id: :blogger_tag %>
+  </div>
+
+  <div class="field">
+    <%= form.label :publico %>
+    <%= form.check_box :publico, id: :blogger_publico %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

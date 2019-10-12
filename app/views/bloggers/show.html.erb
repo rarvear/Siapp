@@ -1,0 +1,67 @@
+<div class="iq-blog-box iq-mt-40">
+
+<!--         TITULO          -->
+  <div class="blog-title"> 
+    <h3 class="title iq-tw-6 iq-mb-10 text-center text-capitalize "> <%= @blogger.titulo %></h3>
+  </div>
+
+<!--         FOTO PRINCIPAL         -->
+
+  <div class="iq-blog-image clearfix pb-5">
+      <%= image_tag(@blogger.fotoppal, class:"img-fluid center-block")%>
+  </div>
+
+<!--         SECCION 1         -->
+
+  <div class="blog-content text-justify">
+    <p>
+      <%= @blogger.sec1 %>
+    </p>
+  </div>
+
+<!--         FOTO SECUNDARIA          -->
+
+   <div class="clearfix text-center pb-5">
+    <%= image_tag(@blogger.minifotosec, class:"img-fluid center-block")%>
+  </div>
+
+<!--         SECCION 2          -->
+
+  <div class="blog-content text-justify">
+    <p>
+      <%= @blogger.sec2 %>
+    </p>
+  </div>
+
+<!--         META         -->
+
+  <div class="iq-blog-meta">
+      <ul class="list-inline text-center">
+          <li class="list-inline-item">
+              <%= @blogger.created_at.strftime("%v %R") %>
+          </li>
+          <li class="list-inline-item">
+              <i class="fa fa-comment-o"></i>
+              <strong>Categoria: </strong><%= @blogger.categoria %>
+
+          </li>  
+
+          <li class="list-inline-item">
+              <strong>Tag: </strong><%= @blogger.tag %>
+          </li>    
+
+          <li class="list-inline-item">
+              <strong>Creado por: </strong><%= @blogger.org %>
+          </li>                      
+      </ul>
+        </div>
+    </div>
+
+
+
+ <% if current_user %>
+
+  <%= link_to 'Editar Post', edit_blogger_path(@blogger) , class:"button pull-right" %>
+  
+<% end %>
+

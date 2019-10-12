@@ -1,0 +1,28 @@
+<% @blogger.map do |blog| %>
+    <div class="iq-blog-box iq-mt-40">
+        <div class="iq-blog-image clearfix">
+
+            <%= image_tag(blog.fotoppal, class:"img-fluid center-block")%>
+        </div>
+        <div class="blog-title"> 
+          <h5 class="iq-tw-6 iq-mb-10 text-center"> <%= link_to blog.titulo, pages_postblog_path(blog) %></h5>
+
+        </div>
+        <div class="blog-content text-justify">
+            <p>
+                <%= blog.resumen %>
+            </p>
+        </div>
+        <div class="iq-blog-meta">
+            <ul class="list-inline text-center">
+                <li class="list-inline-item">
+                    <%= blog.created_at.strftime("%v %R") %>
+                </li>
+                <li class="list-inline-item">
+                    <i class="fa fa-comment-o"></i>
+                    <!-- 5 -->
+                </li>                        
+            </ul>
+        </div>
+    </div>
+<%end%>

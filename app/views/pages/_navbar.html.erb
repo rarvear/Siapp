@@ -1,22 +1,27 @@
         <div class="container">
             <div class="row">
-                <div class="col-sm-14">
+                <div class="col-sm-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
+                        <%= link_to(image_tag("logo/logo-sindicalizapp.png", class:"img-fluid"), root_path, :class => "navbar-brand") %>
+
+                        <!--
                         <a class="navbar-brand" href="#iq-home">
-                                <%= image_tag("logo-footer.png", class:"img-fluid") %> 
+                        -->
+
                             </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="ion-navicon"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="collapse navbar-collapse" style="float: right;" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto w-100 justify-content-end">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#how-it-works">Funciones</a>
+                                    <%= link_to "Funciones", "#{root_path}#how-it-works", :class => "nav-link" %>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#software-features">Servicios</a>
+                                    <%= link_to "Servicios", "#{root_path}#software-features", :class => "nav-link" %>
+
                                 </li>
-                                <li class="nav-item">
+<!--                                <li class="nav-item">
                                     <a class="nav-link" href="#great-screenshots">Screenshots</a>
                                 </li>
                                 <li class="nav-item">
@@ -25,14 +30,31 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#team">Nosotros</a>
                                 </li>
+-->
                                 <li class="nav-item">
+                                    <%= link_to "Blog", pages_blog_path, :class => "nav-link" %>
+
+                                <!--
                                     <a class="nav-link" href="#blog">Blog</a>
+                                -->
+
+
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#contact">Contacto</a>
                                 </li>
                             </ul>
-                            <a href="javascript:void(0)" class="button pull-right">Descargas</a>
+                            <% if current_user %>
+
+                            <%= link_to 'Salir', destroy_user_session_path, method: :delete, class:"button pull-right" %>
+                            <% else %>
+                            <%= link_to 'Login', new_user_session_path, class:"button pull-right" %>
+                            <% end %>
+
+
+
+
+
                         </div>
                     </nav>
                 </div>

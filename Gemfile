@@ -5,11 +5,15 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Para ActiveStorage en S3
+gem "aws-sdk-s3", require: false
 
+# Devise, para autenticaciones
+gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.6', '>= 5.1.6.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'rails', '~> 5.2.0'
+# Para producción en amazon
+gem 'mysql2', '~> 0.5.2'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -30,6 +34,11 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+#gem minimagick variante de ActiveStorage
+gem 'mini_magick', '~> 4.8' 
+
+# Agregando Bootsnap necesario en rails 5.2
+gem 'bootsnap', '~> 1.1.0', require: false
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

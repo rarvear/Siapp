@@ -1,0 +1,27 @@
+    <section class="iq-breadcrumb overview-block-pt text-center jarallax iq-over-blue-90" data-jarallax-video="webm:<%= asset_path '01.webm' %>,ogv:<%= asset_path '01.ogv' %>">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-10">
+                    <div class="heading-title white iq-breadcrumb-title iq-mtb-100 mb-0">
+                        <h1 class="title">El Blog de Sindicalizapp </h1>
+                        <p class="iq-font-white mb-0">Creando contenido que apoyará a tus gestiones.</p>
+
+                    </div>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"> <%= link_to("Home", root_path, :class => "ion-home") %>
+                                </li>
+                            <li class="breadcrumb-item active" aria-current="page">Estás en el Blog</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+      </div>
+    </section>
+        <div class= "mb-5">
+            <% if current_user %>
+
+                <%= link_to 'Administrar los Post', bloggers_path, class:"button pull-right" %>
+
+            <% end %>
+        </div>

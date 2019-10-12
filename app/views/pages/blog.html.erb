@@ -1,0 +1,55 @@
+
+    <!-- Header -->
+    <header id="main-header top" class="header-white">
+        <%= render "pages/navbar" %>
+        
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb -->
+    <%= render "pages/cabezablog" %>
+    <!-- Breadcrumb End -->
+    <!-- Main Content -->
+    <div class="main-content pt-1">
+        <!--======= Blog =======-->
+
+        <section id="blog" class="iq-page-blog overview-block-ptb pt-0">
+            <div class="container">
+
+
+                <div class="row">
+                    <div class="col-md-8 col-sm-12">
+                        
+
+<!--                            PARA CADA POST                  -->
+                       <%= render "pages/resumenblog" %> 
+
+                    </div>
+<!--                            FIN POST            -->
+
+
+                    
+
+<!--            BARRA LATERAL  -->
+
+<!-- 
+
+
+
+                                    BUSCADOR
+
+-->
+                        <%= render "pages/lateralblog" %>
+                </div>
+            </div>
+        </section>
+
+        <!--======= End Blog =======-->
+    </div>
+    <!-- Main Content END -->
+    <!-- Footer -->
+
+        <%= render "pages/footer" %>
+
+    <!-- Footer END -->
+ 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<%= render "pages/navbar" %> 
+</div>
+	<h1>Suscriptores</h1>
+	<div class="table-responsive">
+	<table class="table table-bordered">
+		<thead>
+    		<tr>
+    			<th scope="col">#Contacto</th>
+     			<th scope="col">Nombre</th>
+      			<th scope="col">Email</th>
+      			<th scope="col">Teléfono</th>
+    			<th scope="col">Sindicato</th>
+     			<th scope="col">Cargo</th>
+      			<th scope="col">Fecha</th>
+      			<th scope="col">Mensaje</th>
+    		</tr>
+  		</thead>
+		<tbody>
+		<% @co.each do |c| %>
+			<tr>
+				<th scope="row"><%= c.id %></th>
+				<td><%= c.name %></td>
+				<td><%= c.email %></td>
+				<td><%= c.phone %></td>
+				<td><%= c.sindicato %></td>
+				<td><%= c.cargo %></td>
+				<td><%= c.created_at.strftime("%e/%b/%Y") %></td>
+				<td><%= c.mensaje %><% end %>
+		</tbody>
+	</table>
+	</div>
+</body>
+</html>
+
+
+

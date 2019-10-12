@@ -1,0 +1,54 @@
+
+
+<!-- FORMULARIO CONTACTO -->                            
+
+                            <div class="row justify-content-end">
+                                <div class="iq-get-in">
+                                    <h4 class="iq-tw-7 iq-mb-20">Mantengamos el Contacto</h4>
+                                    <form action="<%= pages_formin_path %>" method="POST" id="contacto">
+                                        <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token">
+                                        <div class="contact-form">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                
+                                                    <div class="section-field">
+                                                        <input class="require" id="contacto_name" type="text" placeholder="Nombre*" name="name">
+                                                    </div>                                
+                                                    <div class="section-field">
+                                                        <input class="require" id="contacto_email" type="email" placeholder="Email*" name="email">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+
+                                                    <div class="section-field">
+                                                        <input class="require" id="contacto_phone" type="text" placeholder="Teléfono*" name="phone">
+                                                    </div>
+                                                        
+                                                    <div class="section-field">
+                                                        <input class="require" id="contacto_sindicato" type="text" placeholder="Sindicato*" name="sindicato">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                               
+
+                                            <div class="section-field">
+                                                <input class="require" id="contacto_cargo" type="text" placeholder="Cargo en Sindicato" name="cargo">
+                                            </div>
+                                            <div class="section-field textarea">
+                                                <textarea id="contacto_message" class="input-message require" placeholder="Comentarios*" rows="5" name="mensaje"></textarea>
+                                            </div>
+    <!--                                            <div class="section-field iq-mt-20">
+                                                    <div class="g-recaptcha" data-sitekey="6LdH_6gUAAAAAAJH4ROOa122eK4lqAuSNBmJTjWg"></div>
+                                                </div>
+    -->                                      <button id="submit" name="submit" type="submit" value="Send" class="button iq-mt-15">Enviar Mensaje</button>
+                                            <div class="alert alert-success alert-dismissible fade show" role="alert" id="success">
+                                                <strong>¡Gracias! Hemos recibido tu mensaje.</strong>.
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
