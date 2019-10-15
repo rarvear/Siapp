@@ -24,10 +24,9 @@ test:
 
 production:
   adapter: postgresql
-  statement_limit: 200
-  host: postgresql.guebs.net
-  port: 5432
-  encoding: utf8
-  database: user_database
-  username: user_username
-  password: password
+  encoding: unicode
+  database: database
+  host: localhost
+  pool: 5
+  username: userdata
+  password: userpass
