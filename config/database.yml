@@ -23,10 +23,11 @@ test:
   database: dmydb
 
 production:
-  adapter: mysql2
+  adapter: postgresql
+  statement_limit: 200
+  host: postgresql.guebs.net
+  port: 5432
   encoding: utf8
-  database: <%= ENV['RDS_DB_NAME'] %>
-  username: <%= ENV['RDS_USERNAME'] %>
-  password: <%= ENV['RDS_PASSWORD'] %>
-  host: <%= ENV['RDS_HOSTNAME'] %>
-  port: <%= ENV['RDS_PORT'] %>
+  database: user_database
+  username: user_username
+  password: password
